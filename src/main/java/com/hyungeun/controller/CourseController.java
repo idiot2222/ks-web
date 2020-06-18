@@ -55,6 +55,8 @@ public class CourseController {
         return "courses/courseList";
     }
 
+//-----------------update, delete 추가------------------
+
     @GetMapping("/courses/update/{id}")
     public String getCourseUpdate(@PathVariable("id") Long id, Model model) {
         Course course = courseRepository.findById(id).get();

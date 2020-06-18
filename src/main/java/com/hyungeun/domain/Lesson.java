@@ -18,7 +18,7 @@ public class Lesson {
 
     private String name;
     private int quota;
-    private int stock;
+    private int stock; // 재고 필드
 
     @OneToMany(mappedBy = "lesson")
     private List<Course> courses = new ArrayList<>();
@@ -32,7 +32,8 @@ public class Lesson {
         this.quota = quota;
     }
 
-    public int getStock() {
+
+    public int getStock() { // 재고값 갱신
         stock = quota - courses.size();
         return stock;
     }

@@ -50,6 +50,8 @@ public class StudentController {
         return "students/studentList";
     }
 
+//-----------------update, delete 추가------------------
+
     @GetMapping("/students/update/{id}")
     public String getStudentUpdate(@PathVariable("id") Long id, Model model) {
         Student student = studentRepository.findById(id).get();

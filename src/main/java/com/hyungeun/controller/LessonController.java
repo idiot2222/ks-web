@@ -41,6 +41,8 @@ public class LessonController {
         return "lessons/lessonList";
     }
 
+//-----------------update, delete 추가------------------
+
     @GetMapping("/lessons/update/{id}")
     public String getLessonUpdate(@PathVariable("id") Long id, Model model) {
         Lesson lesson = lessonRepository.findById(id).get();
